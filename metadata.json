@@ -1,0 +1,6 @@
+{
+  "name": "مشغل يوتيوب المحمي - Secure YouTube Player",
+  "description": "مشغل فيديو يوتيوب بواجهة مخصصة وطبقة حماية تمنع الوصول للرابط أو الواجهة الأصلية",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

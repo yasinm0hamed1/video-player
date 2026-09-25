@@ -1,0 +1,101 @@
+@import "tailwindcss";
+
+:root {
+  --beige-0: #FAF6EF;
+  --beige-1: #F3EAD9;
+  --beige-2: #E9DCC3;
+  --beige-3: #D9C7A3;
+  --ink: #4A4238;
+  --ink-soft: #7A6F5E;
+  --accent: #B08D57;
+  --accent-hover: #987844;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --beige-0: #181512;
+    --beige-1: #231E18;
+    --beige-2: #302A22;
+    --beige-3: #433B30;
+    --ink: #F3EAD9;
+    --ink-soft: #C9BCA3;
+    --accent: #D9B676;
+    --accent-hover: #E5C588;
+  }
+}
+
+:root[data-theme="dark"] {
+  --beige-0: #181512;
+  --beige-1: #231E18;
+  --beige-2: #302A22;
+  --beige-3: #433B30;
+  --ink: #F3EAD9;
+  --ink-soft: #C9BCA3;
+  --accent: #D9B676;
+  --accent-hover: #E5C588;
+}
+
+:root[data-theme="light"] {
+  --beige-0: #FAF6EF;
+  --beige-1: #F3EAD9;
+  --beige-2: #E9DCC3;
+  --beige-3: #D9C7A3;
+  --ink: #4A4238;
+  --ink-soft: #7A6F5E;
+  --accent: #B08D57;
+  --accent-hover: #987844;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Tajawal', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Custom Range Input */
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  background: var(--beige-3);
+  border-radius: 999px;
+  outline: none;
+  cursor: pointer;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--accent);
+  border: 2px solid var(--beige-1);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.25);
+  transition: transform 0.1s ease;
+}
+
+input[type="range"]:hover::-webkit-slider-thumb {
+  transform: scale(1.2);
+}
+
+input[type="range"]::-moz-range-thumb {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--accent);
+  border: 2px solid var(--beige-1);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.25);
+  transition: transform 0.1s ease;
+}
+
+/* Hide scrollbars for neat look */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
